@@ -11,12 +11,22 @@ ATUA is a test automation tool for mobile Apps. It focuses on testing methods up
 Please follow the installation instruction from [Docker's website](https://docs.docker.com/get-docker/) to install Docker.
 
 ### Build the ATUA-docker image
+There are two ways to build the ATUA-docker image.
+
+1. Build directly from this Git repo.
 
 From the ATUA-docker's directory, run the following command to build the docker image:
 
-        docker build -t atua
+        docker build -t atua https://github.com/SNTSVV/ATUA-docker.git
   
 - "atua" is just the name given for the built image.
+
+2. If you want to modify the docker (e.g., change the android platform version), you can clone this git, modify the DockerFile and build the image from the context directory.
+
+From the ATUA-docker's directory, run the following command to build the docker image:
+
+        docker build -t atua ./
+
 
  
 
