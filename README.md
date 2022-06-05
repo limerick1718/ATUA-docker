@@ -25,7 +25,7 @@ From the ATUA-docker's directory, run the following command to build the docker 
 
 From the ATUA-docker's directory, run the following command to build the docker image:
 
-        docker build -t atua ./
+    docker build -t atua ./
 
 ### Run the ATUA-docker image
 
