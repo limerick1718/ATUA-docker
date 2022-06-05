@@ -31,7 +31,7 @@ From the ATUA-docker's directory, run the following command to build the docker 
 
 Since the docker does not contain subject apps except for a case study included for demonstration,  we have to mount a shared folder between the container and the host. The shared folder can be used to store the output of the testing.
 
-                docker run -it --rm --mount type=bind,source=/tmp/subject-apps,target=/data atua bash
+    docker run -it --rm --mount type=bind,source=/tmp/subject-apps,target=/data atua bash
  
 
 
