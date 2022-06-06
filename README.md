@@ -29,9 +29,13 @@ From the ATUA-docker's directory, run the following command to build the docker 
 
 ### Run the ATUA-docker image
 
-Since the docker does not contain subject apps except for a case study included for demonstration,  we have to mount a shared folder between the container and the host. The shared folder can be used to store the output of the testing.
+Since the docker does not contain subject apps except for a case study included for demonstration,  we have to mount a shared folder between the container and the host. The shared folder can be used to store the output of the testing. The following command is an example.
 
-    docker run -it --rm --mount type=bind,source=/tmp/subject-apps,target=/data atua bash
+    docker run -it --rm --mount type=bind,source=/tmp/subjectApps,target=/tmp/data atua bash
  
+This command would start a Bash shell in a new container from the docker image named "atua" and mount the directory /tmp/subjectApps on the host to the directory /tmp/data in the container. You can also use Volumns for the shared data purpose. Please refer to these documentations for further information:
+
+- [docker docs - Use volumes](https://docs.docker.com/storage/volumes/)
+- [docker docs - Use bind mounts](https://docs.docker.com/storage/bind-mounts/)
 
 
