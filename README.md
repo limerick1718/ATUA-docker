@@ -17,7 +17,7 @@ There are two ways to build the ATUA-docker image.
 
 From the ATUA-docker's directory, run the following command to build the docker image:
 
-        docker build -t atua https://github.com/SNTSVV/ATUA-docker.git
+    docker build -t atua https://github.com/SNTSVV/ATUA-docker.git
   
 - "atua" is just the name given for the built image.
 
@@ -33,9 +33,19 @@ Since the docker does not contain subject apps except for a case study included 
 
     docker run -it --rm --mount type=bind,source=/tmp/subjectApps,target=/tmp/data atua bash
  
-This command would start a Bash shell in a new container from the docker image named "atua" and mount the directory /tmp/subjectApps on the host to the directory /tmp/data in the container. You can also use Volumns for the shared data purpose. Please refer to these documentations for further information:
+This command would start a Bash shell in a new container from the docker image named "atua" and mount the directory /tmp/subjectApps on the host to the directory /tmp/data in the container. You can also use Volumns for the shared data purpose. Please refer to these documentations for further details:
 
 - [docker docs - Use volumes](https://docs.docker.com/storage/volumes/)
 - [docker docs - Use bind mounts](https://docs.docker.com/storage/bind-mounts/)
+
+### Run ATUA toolset
+
+ATUA toolset is located in /opt/tools/atua-toolset. We also provide an example in this docker image, which is testing the upgrades on the version 134 compared to the version 131 of Activity Diary app.
+
+In this instruction, we demonstrate how to execute the testing tool ATUA since we provide all the necessary inputs for ATUA. You can also follow the [manual](https://zenodo.org/record/6539441/files/ATUAManual.pdf?download=1) to reproduce the inputs (i.e., instrumented apk, EWTG) from scratch.
+
+1. Prepare the configuration for ATUA
+
+In the atua-toolset/template directory, you can find an example configuration file for ATUA named "defaultConfig.properties". 
 
 
