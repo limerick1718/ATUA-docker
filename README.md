@@ -17,7 +17,7 @@ There are two ways to build the ATUA-docker image.
 
 From the ATUA-docker's directory, run the following command to build the docker image:
 
-    docker build -t atua https://github.com/SNTSVV/ATUA-docker.git
+    docker build -t atua git@github.com:limerick1718/ATUA-docker.git
   
 - `atua` is just the name given for the built image.
 
